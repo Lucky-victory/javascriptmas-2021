@@ -11,10 +11,14 @@ html{
   --snow-blue:#2A6BB5;
   --top-bg-image:url('./images/christmas.jpg');
   --bottom-bg-image:url('./images/christmas.jpg');
+  --animation-dur:2.5s;
+  
+  font-family: inherit;
 }
 body{
   min-height: 100vh;
   width: 100%;
+  font-family: 'Outfit',sans-serif;
 }
 .main-container{
   width: 100%;
@@ -25,7 +29,6 @@ body{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  --animation-dur:2s;
   
 }
 .main-container.snow{
@@ -113,6 +116,7 @@ bottom: 0;
   backdrop-filter: blur(5px);
   padding: 0.25em 0.625em ;
   border-radius: 5px;
+  z-index: 3;
 }
 .switch-wrapper{
   display: flex;
