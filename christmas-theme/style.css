@@ -12,7 +12,6 @@ html{
   --top-bg-image:url('./images/christmas.jpg');
   --bottom-bg-image:url('./images/christmas.jpg');
   --animation-dur:2.5s;
-  
   font-family: inherit;
 }
 body{
