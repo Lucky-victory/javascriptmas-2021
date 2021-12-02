@@ -188,7 +188,7 @@ bottom: 0;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 0.5em;
+  border-radius: 0.375em;
 
 }
 .main-container.snow .quote-container{
@@ -217,16 +217,21 @@ bottom: 0;
 }
 
 .quote-content{
-  padding: 1.5em;
-  line-height: 1.6;
-  font-size: 1.1em;
+  padding: 1em;
+  line-height: 1.1;
+  font-size: 2em;
+  font-weight: 400;
+  font-family: 'Outfit',sans-serif;
 }
 
 .quote-author{
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  font-weight: 600;
+  font-size: 1.375em;
+  font-weight: 700;
   color: var(--christmas-red);
+  font-family: 'Orbitron',sans-serif;
+  padding: 0.375em;
 }
 .main-container.snow .quote-author{
   color: var(--snow-blue);
