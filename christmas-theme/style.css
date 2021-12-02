@@ -1,0 +1,240 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+html{
+  --christmas-red:#E40A2D;
+  --snow-blue:#2A6BB5;
+  --top-bg-image:url('./images/christmas.jpg');
+  --bottom-bg-image:url('./images/christmas.jpg');
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+}
+.main-container{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  --animation-dur:2s;
+  
+}
+.main-container.snow{
+--top-bg-image:url('./images/snow1.jpg');  
+--bottom-bg-image:url('./images/snow1.jpg')  
+}
+.main-container::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: var(--top-bg-image) no-repeat center/cover;
+  z-index: -1;
+
+}
+.main-container.snow::before{
+      animation: moveUp var(--animation-dur) linear;
+      
+
+}
+.main-container.christmas::before{
+      animation: moveUp2 var(--animation-dur) linear;
+      
+
+}
+@keyframes moveUp{
+  from{
+    top:-40%;
+  }
+  to{
+    top:0;
+  }
+}
+@keyframes moveUp2{
+  from{
+    top:-40%;
+  }
+  to{
+    top:0;
+  }
+}
+.main-container::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: var(--bottom-bg-image) no-repeat center/cover;
+  z-index: -1;
+  transform: rotate(180deg);
+
+}
+.snow::after{
+    animation: moveDown var(--animation-dur) linear;
+bottom: 0;
+}
+.christmas::after{
+    animation: moveDown2 var(--animation-dur) linear;
+
+}
+@keyframes moveDown{
+  from{
+    bottom:-40%;
+  }
+  to{
+    bottom:0;
+  }
+}
+@keyframes moveDown2{
+  from{
+    bottom:-40%;
+  }
+  to{
+    bottom:0;
+  }
+}
+.toggle-switch-container{
+  position: absolute;
+  top:3%;
+  right: 5%;
+  background: #fffa;
+  backdrop-filter: blur(5px);
+  padding: 0.25em 0.625em ;
+  border-radius: 5px;
+}
+.switch-wrapper{
+  display: flex;
+  align-items: center;
+  margin: 0.5em auto;
+}
+.switch-wrapper label{
+  font-size: 1.1em;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+.toggle-switch{
+
+-webkit-appearance: none;
+  appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 40px;
+  background: #0003;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  
+}
+.toggle-switch::before{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  left: 4px;
+  top: 5px;
+  transition: 0.4s ease-out
+}
+
+.toggle-switch[data-theme="christmas"]:checked{
+  background: #E40A2D33;
+}
+.toggle-switch[data-theme="christmas"]:checked + label{
+  color: var(--christmas-red);
+}
+.toggle-switch[data-theme="snow"]:checked{
+  background: #2A6BB533;
+}
+.toggle-switch[data-theme="snow"]:checked
+ + label{
+  color: var(--snow-blue);
+}
+.toggle-switch[data-theme="christmas"]:checked::before{
+  left: 35px;
+    transition: 0.4s ease-out;
+    background: var(--christmas-red);
+
+}
+.toggle-switch[data-theme="snow"]:checked::before{
+  left: 35px;
+    transition: 0.4s ease-out;
+    background: var(--snow-blue);
+
+}
+.quote-container{
+  width: 100%;
+  max-width: 380px;
+  height: 420px;
+  margin: 3em auto;
+  background: #fff;
+  box-shadow: -5px 15px 30px #0004,5px -15px 30px #0002;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 0.5em;
+
+}
+.main-container.snow .quote-container{
+    animation: scaleIn var(--animation-dur) linear
+  
+}
+.main-container.christmas .quote-container{
+    animation: scaleIn2 var(--animation-dur) linear
+  
+}
+@keyframes scaleIn{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+@keyframes scaleIn2{
+  from{
+    transform: scale(0);
+  }
+  to{
+    transform: scale(1);
+  }
+}
+
+.quote-content{
+  padding: 1.5em;
+  line-height: 1.6;
+  font-size: 1.1em;
+}
+
+.quote-author{
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  color: var(--christmas-red);
+}
+.main-container.snow .quote-author{
+  color: var(--snow-blue);
+  
+}
+@media all and (min-width:800px){
+  .quote-container{
+    max-width: 600px;
+    height: 300px;
+  }
+}
