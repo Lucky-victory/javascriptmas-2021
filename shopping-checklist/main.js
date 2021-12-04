@@ -20,7 +20,11 @@ const storage={
     const allItems=this.getItems();
     allItems.splice(itemIndex,1);
     localStorage.setItem('shopping-checklist',JSON.stringify(allItems));
+  },
+  destroy(){
+    localStorage.removeItem('shopping-checklist');
   }
+  
   
 }
 popupCancelBtn.addEventListener('click',()=>{
@@ -82,6 +86,10 @@ function triggerDelete(evt) {
 }
 function confirmDelete(itemToDelete){
   storage.deleteItem(itemToDelete);
+  const allItems=storage.getItems();
+  if(allItems.length === 0){
+    storage.destroy();
+  }
   renderView();
 }
 // Task:
