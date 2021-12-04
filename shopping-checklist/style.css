@@ -1,0 +1,270 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body{
+  font-size: 16px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: 'Outfit',sans-serif;
+  background: #0009 url('./images/cocktail.jpg') no-repeat center/cover;
+  background-blend-mode: soft-light;
+}
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 0.5em;
+  padding: 1.5em 0;
+}
+.heading{
+  font-size: 2.5em;
+  margin-bottom: 0.75em;
+  text-transform: uppercase;
+  color: #560E4A;
+  text-align: center;
+  font-weight: 500;
+}
+.popup{
+  background: #3F404D;
+  color: #fff;
+  padding: 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 15px 25px #0005 ;
+  width: 100%;
+  max-width: 400px;
+   position: absolute;
+   top: 5%;
+   left: 50%;
+   transform: translate(-50%,-100vh);
+   visibility: hidden;
+   transition: 0.4s ease-in;
+   z-index: 100;
+}
+.popup.show{
+  
+  visibility: visible;
+   transform: translate(-50%,-5%);
+  transition: 0.4s ease-in;
+}
+.popup-btns-container{
+  margin: 1em auto 0;
+  text-align: right;
+}
+.popup-btn{
+  padding: 0.5em;
+  background: transparent;
+  border: 2px solid transparent;
+  outline: none;
+  box-shadow: 0 10px 14px #0005;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.375em;
+  font-weight: 500;
+}
+
+.popup-confirm-btn{
+  background: #3A759F;
+}
+.popup-confirm-btn:hover{
+  background: #064A81;
+}
+.popup-cancel-btn{
+  border-color: #CA0E0E;
+  margin-right: 0.5em;
+  
+}
+.popup-cancel-btn:hover{
+  background: #CA0E0E;
+}
+
+.shopping-checklist-container{
+  width: 100%;
+  background: #fff;
+  padding: 1em;
+  border-radius: 0.5em
+}
+.add-checklist-form{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 3.5em;
+  box-shadow: 0 10px 15px #0005;
+border-radius: 6em;
+padding: 0.25em;
+}
+.add-checklist-input{
+  outline: none;
+  border: 2px solid #ADB1B3;
+  padding: 0.5em;
+  padding-left: 1em;
+  border-radius: 5em 0 0 5em;
+  font-size: 1em;
+  height: 100%;
+  border-right: 0;
+  flex: 1;
+}
+.add-checklist-input:focus{
+  border-color: #0A7AA6;
+}
+.add-checklist-btn{
+height: 100%;
+padding: 0.5em 1.5em;
+text-transform: uppercase;
+cursor: pointer;
+outline: none;
+border: 2px solid transparent;
+border-radius:0 5em 5em 0;
+font-weight: 600;
+font-size: 1.2em;
+background: #0A7AA6;
+color: #fff;
+}
+.add-checklist-btn:hover{
+  background:#0A7AA633;
+  color: #0A7AA6;
+  border-color: #0A7AA6;
+}
+.checklist-container{
+  padding: 2em 1em;
+  width: 100%;
+}
+.checklist-item{
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+  margin: 0.5em auto 1em;
+  width: 100%;
+  color: #560E4A;
+  background: #F4F6FA;
+  border-radius: 6em;
+  padding: 0.875em 1em;
+  
+}
+.checkbox-wrapper{
+  display: flex;
+  align-items: center;
+}
+.checklist-checkbox{
+  color: inherit;
+  margin-right: 1em;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2.5px solid currentColor;
+  border-radius: 0.25em;
+      transition:transform 0.4s ease-in-out;
+
+}
+.checklist-checkbox:checked{
+  transform: rotate(-45deg);
+    transition:transform 0.4s ease-in-out;
+    color: #777;
+    border-top: 0;
+    border-right: 0;
+    width: 1.875em;
+    height: 1em;
+    margin-top: -0.5em;
+
+}
+.checklist-checkbox:checked + .checklist-label{
+  color: #777;
+}
+.checklist-label{
+  position: relative;
+  text-transform: capitalize;
+}
+.checklist-label:before{
+  content: "";
+  position: absolute;
+  top:50%;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  transform: translateY(-50%);
+  background:currentColor ;
+  border-radius: 5px;
+  transition:width 0.3s ease-in-out;
+
+}
+.checklist-checkbox:checked + .checklist-label:before{
+width: 100%;
+  transition:width 0.3s ease-in-out;
+
+}
+.delete-btn{
+  color:#B9051B;
+  margin-left: 2em;
+  display:inline-block;
+  width: 1.5em;
+  height: 1.75em;
+  border: 2px solid currentColor;
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  border-top: 1px solid;
+  cursor: pointer;
+
+}
+
+.delete-btn:before{
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 80%;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: currentColor;
+  border-radius: 5px;
+}
+.delete-btn:after{
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 80%;
+  right: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: currentColor;
+    border-radius: 5px;
+
+}
+.delete-btn span{
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 0.375em;
+  border-radius: 0.375em 0.375em 0 0;
+  top: -0.375em;
+  left: 50%;
+  transform: translate(-50%);
+  background: currentColor;
+  transition: 0.4s ease-in-out;
+}
+.delete-btn:hover span{
+    transform: rotate(45deg);
+transition: 0.4s ease-in-out
+}
+.delete-btn span:before{
+  content: "";
+  position: absolute;
+  top:-0.25em;
+  left: 50%;
+    transform: translate(-50%);
+background: inherit;
+width: 50%;
+height: 0.25em;
+border-radius: inherit;
+}

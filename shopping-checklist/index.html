@@ -4,11 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Scrimba Javascriptmas | Shopping Checklist</title>
+    <link rel="stylesheet" href="./style.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <div class="popup">
+    <span class="popup-text">Are you sure you want to delete this item?</span>
+    
+    <div class="popup-btns-container">
+      
+    <button class="popup-cancel-btn popup-btn">cancel</button>
+  <button class="popup-confirm-btn popup-btn">confirm</button>
+    </div>
+  
+  </div>
+<main class="container">
+<h1 class="heading">shopping checklist</h1>
+  <div class="shopping-checklist-container">
+    <form  class="add-checklist-form">
+      <input type="text" class="add-checklist-input" />
+      <button class="add-checklist-btn">add</button>
+    </form>
+    <div id="checklist" class="checklist-container">
+      
+    </div>
+  </div>
+</main>
 
+<script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
