@@ -7,7 +7,8 @@ const addChecklistInput=document.querySelector('.add-checklist-input');
 let itemToDelete;
 const storage={
   getItems(){
-   return (JSON.parse( localStorage.getItem('shopping-checklist') || '[]'));
+    const storedItems=localStorage.getItem('shopping-checklist');
+   return (JSON.parse( storedItems != null ? storedItems : '["Mouse","laptop","Keyboard"]'));
   },
   setItem(newItem){
     const allItems=this.getItems();
