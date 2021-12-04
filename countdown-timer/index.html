@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrimba Javascriptmas | Countdown timer</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;900&display=swap" rel="stylesheet">
+  <meta property="og:image" content="https://javascriptmas-vic-day1.netlify.app/images/countdown-opengraph.png">
+</head>
+
+<body>
+  <h1 class="heading">christmas countdown</h1>
+  <main class="container">
+    <div class="circle-wrapper days">
+      <svg>
+        <circle class="inner" cy="70" r="60" cx="75" />
+        <circle class="outer days-outer" cy="70" r="60" cx="75" />
+      </svg>
+      <div class="timer-container">
+        <span class="timer days">0</span>
+        <span class="timer-title">days</span>
+      </div>
+    </div>
+    <div class="circle-wrapper hours">
+      <svg>
+        <circle class="inner" cy="70" r="60" cx="75" />
+        <circle class="outer hours-outer" cy="70" r="60" cx="75" />
+      </svg>
+      <div class="timer-container">
+        <span class="timer hours">0</span>
+        <span class="timer-title">hours</span>
+      </div>
+    </div>
+    <div class="circle-wrapper minutes">
+      <svg>
+        <circle class="inner" cy="70" r="60" cx="75" />
+        <circle class="outer minutes-outer" cy="70" r="60" cx="75" />
+      </svg>
+      <div class="timer-container">
+        <span class="timer minutes">0</span>
+        <span class="timer-title">minutes</span>
+      </div>
+    </div>
+    <div class="circle-wrapper seconds">
+      <svg>
+        <circle class="inner" cy="70" r="60" cx="75" />
+        <circle class="outer seconds-outer" cy="70" r="60" cx="75" />
+      </svg>
+      <div class="timer-container">
+        <span class="timer seconds">0</span>
+        <span class="timer-title">seconds</span>
+      </div>
+    </div>
+  </main>
+  <script src="./main.js" type="application/javascript" charset="utf-8"></script>
+</body>
+
+</html>
