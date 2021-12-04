@@ -7,13 +7,13 @@ const timerMinutes=document.querySelector('.timer.minutes');
 const timerHours=document.querySelector('.timer.hours');
 const timerDays=document.querySelector('.timer.days');
 const circleTotalLength=380;
-const christmasDate='2021-12-04T07:59:10';
+const christmasDate='2021-12-25T00:00:00';
 const christmasDay=new Date(christmasDate).getTime();
 const intervalId=setInterval(()=>{
 const today=new Date().getTime();
   const timeDiff= christmasDay - today;
   const time=new Date(timeDiff);
-  console.log(timeDiff);
+  
   if (timeDiff <= 0) {
     clearInterval(intervalId);
     return;

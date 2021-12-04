@@ -129,7 +129,7 @@ svg circle.inner{
   text-transform: uppercase;
   font-size: 1em;
 }
-@media all and (max-width: 400px){
+@media all and (max-width: 450px){
   body{
     font-size: 13px;
   }
