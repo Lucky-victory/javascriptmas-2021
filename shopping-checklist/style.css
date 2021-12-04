@@ -270,3 +270,10 @@ width: 50%;
 height: 0.25em;
 border-radius: inherit;
 }
+
+
+@media all and (max-width:400px){
+  body{
+    font-size: 14px;
+  }
+}
