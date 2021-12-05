@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+html{
+  --card1-img:url('./images/car.jpg');
+  --card2-img:url('./images/christmas-tree.jpg');
+  --card3-img:url('./images/christmas-tree2.jpg');
+  --card4-img:url('./images/gift-box.jpg');
+  --card5-img:url('./images/red-christmas.jpg');
+}
+body{
+  font-size: 16px;
+}
+.card-preview-container{
+  padding: 1em;
+  width: 100%;
+}
+.card{
+  width: 100%;
+  max-width: 500px;
+  height: 21.875em;
+  background:var(--card1-img) no-repeat center/cover;
+  border-radius: 0.5em;
+  position: relative;
+  padding: 2em 1.5em;
+}
+.card-content{
+  padding:1.5em ;
+  background: #fff9;
+  border-radius: 0.5em;
+  backdrop-filter: blur(5px);
+  width:90%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+margin: auto;
+position: absolute;
+font-size: 1.3em;
+}
+.card-receiver{
+  
+}
+.card-sender{
+  position: absolute;
+  bottom: 2em;
+  right: 1.5em;
+  text-transform: capitalize;
+  
+}
+.card-receiver-name{
+  font-weight: 500;
+}
