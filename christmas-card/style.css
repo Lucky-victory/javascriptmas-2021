@@ -9,40 +9,67 @@
 html{
   --card1-img:url('./images/car.jpg');
   --card2-img:url('./images/christmas-tree.jpg');
-  --card3-img:url('./images/christmas-tree2.jpg');
+  --card3-img:url('./images/christmas-tree-2.jpg');
   --card4-img:url('./images/gift-box.jpg');
   --card5-img:url('./images/red-christmas.jpg');
+  --font-meow: 'Meow Script', cursive;
+--font-nunito: 'Nunito', sans-serif;
+--font-christmas: 'Mountains Of Christmas', sans-serif;
+
+
 }
 body{
   font-size: 16px;
+  font-family: var(--font-nunito);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.container{
+  padding: 2em 1em;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 10px 15px #64646466;
 }
 .card-preview-container{
-  padding: 1em;
+  padding: 1em 0;
   width: 100%;
+  max-width: 800px;
+  margin: 1em auto;
 }
 .card{
-  width: 100%;
-  max-width: 500px;
-  height: 21.875em;
+  width: 600px;
+  max-width: 100%;
+  height: 23em;
   background:var(--card1-img) no-repeat center/cover;
-  border-radius: 0.5em;
   position: relative;
-  padding: 2em 1.5em;
+  padding: 2em 1em;
+  margin: auto;
+  
 }
 .card-content{
   padding:1.5em ;
-  background: #fff9;
-  border-radius: 0.5em;
+  background: #fffa;
+  border-radius: 0.25em;
   backdrop-filter: blur(5px);
-  width:90%;
+  width:calc(100% - 2em);
   top:50%;
   left: 50%;
   transform: translate(-50%,-50%);
-margin: auto;
 position: absolute;
 font-size: 1.3em;
+font-weight: 500;
+font-family: var(--font-meow);
+color: #075C45;
 }
 .card-receiver{
+  text-transform: capitalize;
+  color: #fff;
+  background: #075C45;
+  display: inline-block;
+  padding: 0.5em;
   
 }
 .card-sender{
@@ -50,8 +77,117 @@ font-size: 1.3em;
   bottom: 2em;
   right: 1.5em;
   text-transform: capitalize;
+  color: #075C45;
+  background: #fff;
+  padding: 0.5em;
+}
+.card-receiver-name,.card-sender-name{
+  font-weight: 500;
+}
+
+.inputs-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  margin:0.5em auto;
+  padding: 0 0.5em;
   
 }
-.card-receiver-name{
+label{
+  margin-bottom: 0.5em;
+  display: inline-block;
+  text-transform: capitalize;
   font-weight: 500;
+}
+.input-wrapper{
+  margin: 0 0.375em;
+
+}
+.input{
+  padding: 0.5em;
+  display: block;
+  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 0.375em;
+  font-size: 1.1em;
+  width: 10em;
+  color: #5B0375;
+}
+.input:focus{
+  border-color: #5B0375;
+}
+
+.download-btn-wrapper{
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+.download-card-btn{
+  padding: 1em 1.5em;
+  border-radius: 0.375em;
+  color: #fff;
+  background: #5B0375;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 14px #64646466;
+}
+.mini-cards-container{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1em;
+  max-width: 600px;
+  margin: auto;
+}
+.mini-card{
+  width: 8em;
+  height: 5em;
+  flex-shrink: 0;
+  margin:0 1em;
+  margin-left: 0;
+  border-radius: 0.375em;
+  border: 2px solid transparent;
+}
+.mini-card.active{
+  border-color: #5B0375;
+  opacity: 0.7;
+}
+.mini-card:nth-of-type(1){
+  background: var(--card2-img) no-repeat center/cover;
+}
+.mini-card:nth-of-type(2){
+  background: var(--card5-img) no-repeat center/cover;
+}
+.mini-card:nth-of-type(3){
+  background: var(--card1-img) no-repeat center/cover;
+}
+.mini-card:nth-of-type(4){
+  background: var(--card4-img) no-repeat center/cover;
+}
+.mini-card:nth-of-type(5){
+  background: var(--card3-img) no-repeat center/cover;
+}
+
+.change-message-btn-wrapper{
+  text-align: center;
+  margin-bottom: 1em;
+}
+.change-message-btn{
+  padding: 1em 1.5em;
+  border-radius: 0.375em;
+  color: #fff;
+  background: #5B0375;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 14px #64646466;
 }

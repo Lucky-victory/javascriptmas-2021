@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Nunito:wght@300;400&family=Quicksand:wght@300;400&family=Tangerine:wght@400;700&family=Yanone+Kaffeesatz:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Meow+Script&family=Nunito:wght@400;500&family=Mountains+of+Christmas&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,18 +16,46 @@
   <main class="container">
   <div class="card-preview-container">
        <div class="card">
-         <div class="card-receiver">To: <span class="card-receiver-name">Jane</span></div>
+         <div class="card-receiver">To: <span class="card-receiver-name">receiver's name here</span></div>
          <div class="card-content">
-           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore temporibus dolor ullam iusto blanditiis tempora? Esse fugiat, eligendi iusto atque!</p>
+           <p>
+             
+           </p>
          </div>
-         <div class="card-sender">From: <span class="card-sender-name">Marvis</span></div>
+         <div class="card-sender">From: <span class="card-sender-name">your name here</span></div>
        </div> 
   </div>
-  <div class="cards-list-container">
+  <div class="change-message-btn-wrapper">
+    <button class="change-message-btn">change message</button>
+  </div>
+  <div class="mini-cards-container">
+<div class="mini-card" data-bg-image="./images/christmas-tree.jpg"></div>
+<div class="mini-card" data-bg-image="./images/red-christmas.jpg"></div>
+<div class="mini-card active" data-bg-image="./images/car.jpg"></div>
+<div class="mini-card" data-bg-image="./images/gift-box.jpg"></div>
+<div class="mini-card" data-bg-image="./images/christmas-tree-2.jpg"></div>
+  </div>
+  <div class="inputs-container">
+    <div class="input-wrapper">
+      
+        <label for="sender-name">Your name:</label>
 
+    <input type="text" id="sender-name" class="input" placeholder="Your name"/>
+    </div>
+    <div class="input-wrapper">
+      
+    <label for="receiver-name">receiver's name:</label>
+    <input type="text" id="receiver-name" class="input" placeholder="Receiver's name"/>
+    </div>
+    
+  </div>
+  <div class="download-btn-wrapper">
+    
+  <a class="download-card-btn">download card</a>
   </div>
 </main>
 
+<script src="./html2canvas.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
