@@ -30,6 +30,7 @@ body{
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 2em 0.25em;
+  max-width: 1200px;
 }
 .heading{
   font-size: 3em;
