@@ -15,6 +15,7 @@ html{
   --font-meow: 'Meow Script', cursive;
   --font-tangerine: 'Tangerine', cursive;
 --font-nunito: 'Nunito', sans-serif;
+--font-raleway: 'Raleway', sans-serif;
 --font-gowun: 'Gowun Bantang', serif;
 --font-christmas: 'Mountains Of Christmas', sans-serif;
 
@@ -63,7 +64,7 @@ body{
 position: absolute;
 font-size: 1.3em;
 font-weight: 500;
-font-family: var(--font-meow);
+font-family: var(--font-raleway);
 color: #075C45;
 }
 .card-receiver{
@@ -192,4 +193,18 @@ label{
   text-transform: uppercase;
   cursor: pointer;
   box-shadow: 0 8px 14px #64646466;
+}
+.change-font-btn{
+  padding: 0.875em 1.5em;
+  border-radius: 0.375em;
+  background: transparent;
+  border: 2px solid currentColor;
+  color: #5B0375;
+  outline: none;
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 14px #64646466;
+  margin-left: 1em;
 }
