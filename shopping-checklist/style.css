@@ -168,6 +168,7 @@ justify-content: space-between;
   border: 2.5px solid currentColor;
   border-radius: 0.25em;
       transition:transform 0.4s ease-in-out;
+      cursor: pointer;
 
 }
 .checklist-checkbox:checked{
@@ -187,6 +188,7 @@ justify-content: space-between;
 .checklist-label{
   position: relative;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .checklist-label:before{
   content: "";
