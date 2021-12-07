@@ -5,23 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scrimba Javascriptmas | Christmas player</title>
-<script src="https://kit.fontawesome.com/640367d713.js" crossorigin="anonymous"></script></head>
+<script src="https://kit.fontawesome.com/640367d713.js" crossorigin="anonymous" ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style.css">
+</head>
 
 <body>
-<main class="container">
-  <div class="player-image-container"></div>
+<main class="container ">
+  
+  <div class="player-images-container">
+    <div class="player-handle"></div>
+    <div class="player-disc">
+      <div class="player-image-wrapper">
+        <img src="./images/christmas2.jpg" alt="" class="player-image">
+      </div>
+    </div>
+  </div>
+  <div class="player-song-title"></div>
   <div class="progress">
     <div class="progress-fill"></div>
   </div>
-  <div class="controls-container">
-    
+  <div class="player-time-container">
+    <span class="player-time-elasped">--:--</span>
+    <span class="player-time-total">--:--</span>
   </div>
-  <span class="fas fa-play" id="play-pause-btn"></span>
-  <span class="fas fa-pause"></span>
-  <span class="fas fa-forward" id="forward-btn"></span>
-  <span class="fas fa-backward" id="backward-btn"></span>
-  <span class="fas fa-list" id="toggle-playlist"></span>
+  <div class="player-controls-container">
+  <button class="player-control-btn" id="backward-btn" title="previous song"><span class="fas fa-backward"></span></button>
+    
+  <button class="player-control-btn" id="play-pause-btn" title="play"><span class="fas fa-play"></span></button>
+  <button class="player-control-btn" id="forward-btn" title="next song"><span class="fas fa-forward"></span></button>
+  </div>
+  
+  
+  
 </main>
+
+<script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
