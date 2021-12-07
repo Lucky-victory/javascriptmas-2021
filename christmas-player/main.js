@@ -9,7 +9,13 @@ const progressElem = document.querySelector('.progress')
 const progressFillElem = document.querySelector('.progress-fill');
 const playerTimeElasped = document.querySelector('.player-time-elasped');
 const playerTimeTotal = document.querySelector('.player-time-total');
+const volumeUpBtn=document.querySelector('#volume-up')
+const volumeDownBtn=document.querySelector('#volume-down');
+const volumePercentElem=document.querySelector('.volume-percent');
 const player = new Audio();
+
+volumeUpBtn.addEventListener('click',increaseVolume);
+volumeDownBtn.addEventListener('click',decreaseVolume);
 playPauseBtn.addEventListener('click', playOrPauseSong);
 player.addEventListener('loadedmetadata',loadDuration);
 player.addEventListener('timeupdate',updatePlayTime);
@@ -17,6 +23,8 @@ forwardBtn.addEventListener('click',nextSong);
 backwardBtn.addEventListener('click',prevSong);
 progressElem.addEventListener('click',seekPlayer);
 let currentIndex=0;
+  let volume=1;
+
 const Musics = [
   {
     title: 'Joy to the world',
@@ -66,10 +74,6 @@ function updatePlayTime() {
   
 }
 
-function updateProgress(){
-
-}
-
 function playSong() {
   container.classList.add('playing');
   player.play();
@@ -107,7 +111,26 @@ function playOrPauseSong() {
     playSong();
   }
 }
-
+function increaseVolume(){
+ volume += 0.25;
+ if (volume >=1 ) {
+   volume = 1;
+ }
+ player.volume = volume;
+ const percent = volume * 100;
+ 
+ volumePercentElem.textContent = percent;
+}
+function decreaseVolume(){
+  volume-=0.25;
+  if(volume <= 0){
+volume=0;
+}
+  player.volume=volume;
+  const percent=volume * 100;
+  
+  volumePercentElem.textContent=percent;
+}
 function seekPlayer(evt) {
        const { duration, currentTime } = player;
        const { clientWidth } =progressElem;

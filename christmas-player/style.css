@@ -157,3 +157,15 @@ transform: translate(-50%,-50%);
   background: #AB3C60;
   color: #fff;
 }
+
+.volume-controls-container{
+  text-align: center;
+  margin-top: 2em;
+  text-transform: capitalize;
+  color: #05655E;
+}
+.volume-title{
+  display: inline-block;
+  margin-bottom: 0.5em;
+  
+}
