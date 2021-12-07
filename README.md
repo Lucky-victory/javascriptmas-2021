@@ -32,3 +32,8 @@ submission link:
  [https://javascriptmas-vic-day6.netlify.app/](https://javascriptmas-vic-day6.netlify.app/)
  *was emotionally ill, so i couldn't give it my best*
  ______________
+## Day 7 Challenge - Christmas player.
+submission link: 
+ [https://javascriptmas-vic-day7.netlify.app/](https://javascriptmas-vic-day7.netlify.app/)
+ *was emotionally ill, so i couldn't give it my best*
+ ______________
