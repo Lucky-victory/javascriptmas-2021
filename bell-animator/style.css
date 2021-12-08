@@ -13,6 +13,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Outfit',sans-serif;
 }
 .container{
   border-radius: 0.5em;
@@ -26,17 +27,28 @@ h1{
   font-size: 2em;
   font-weight: 600;
   margin-bottom: 0.5em;
+  color: #DD7011;
+  background: linear-gradient(0deg,#06704B,#DD7011,#D61010 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
-.bell{
-  font-size: 4em;
+.bell-container{
   text-align: center;
   position: relative;
-  /* background: #000; */
-  animation: dangle 1s ease-in-out infinite alternate-reverse;
-animation-play-state: running;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bell:hover{
-  animation-play-state: paused;
+.bell{
+    font-size: 4em;
+  display: inline-block;
+  animation: dangle 1s ease-in-out infinite alternate-reverse;
+animation-play-state: paused;
+
+}
+.bell-container.animate .bell{
+  animation-play-state: running;
 }
 @keyframes dangle{
   from{
@@ -45,4 +57,84 @@ animation-play-state: running;
   to{
     transform: rotateZ(45deg)
   }
+}
+.wifi-sign{
+  width: 1em;
+  height: 2em;
+  border-radius: 50%;
+  border: 4px solid #DD7011;
+  border-left-width: 0;
+  border-top-width: 0;
+  border-bottom-width: 0;
+  display: inline-block;
+}
+.bell-container.animate .wifi-sign{
+  animation: fade 1s linear infinite alternate-reverse;
+  
+}
+.wifi-sign.left{
+    border-radius: 50%;
+    border: 4px solid #DD7011;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+
+}
+.bell-container.animate .wifi-sign.left{
+      animation: fade2 1s linear infinite alternate-reverse;
+  
+}
+.wifi-sign-large {
+  height: 2.5em;
+  animation-delay: 0.15s
+}
+@keyframes fade {
+  from{
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  from{
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.btns-container{
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  
+}
+.player-control-btn{margin: 0 1em;
+  background: #fff;
+  cursor: pointer;
+  padding: 0.5em;
+  border: none;
+  box-shadow: 0 5px 10px #0003;
+  border: 3px solid #E1E1E1;
+  border-radius: 50%;;
+  font-size: 1.1em;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border-color: currentColor;
+}
+.player-control-btn#play-btn{
+  color: #06704B;
+}
+.player-control-btn#pause-btn{
+  color: #DD7011;
+}
+.player-control-btn#stop-btn{
+  color: #D61010;
 }

@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scrimba Javascriptmas | Bell Animator</title>
+    <script src="https://kit.fontawesome.com/640367d713.js" crossorigin="anonymous" ></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -13,11 +16,22 @@
     
 <h1>Bell Animator</h1>
 <div class="inner-container">
-  <div class="bell">🔔</div>
+  <div class="bell-container ">
+  <span class="wifi-sign wifi-sign-large left"></span>
+  <span class="wifi-sign left"></span>
+  <span class="bell">  🔔</span>
+  <span class="wifi-sign "></span>
+  <span class="wifi-sign wifi-sign-large"></span>
+  </div>
+  <div class="btns-container">
+    <button class="player-control-btn fas fa-play" id="play-btn"></button>
+    <button class="player-control-btn fas fa-pause" id="pause-btn"></button>
+    <button class="player-control-btn fas fa-stop" id="stop-btn"></button>
+  </div>
 </div>
+
+
   </main>
-
-
 <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
