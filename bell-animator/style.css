@@ -1,0 +1,48 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  border-radius: 0.5em;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 5px 25px #0003;
+  padding: 2em 1em;
+}
+h1{
+  text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+.bell{
+  font-size: 4em;
+  text-align: center;
+  position: relative;
+  /* background: #000; */
+  animation: dangle 1s ease-in-out infinite alternate-reverse;
+animation-play-state: running;
+}
+.bell:hover{
+  animation-play-state: paused;
+}
+@keyframes dangle{
+  from{
+    transform: rotateZ(-45deg)
+  }
+  to{
+    transform: rotateZ(45deg)
+  }
+}
