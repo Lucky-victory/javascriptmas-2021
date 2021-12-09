@@ -3,14 +3,43 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./style.css">
+<title>Scrimba Javascriptmas | Turn on the decorations</title>
     </head>
     <body>
         <main class="container">
-            <div class="house"></div>
-            <input type="checkbox" class="decorator" id="decorator">
-            <label for="decorator"></label>
+            <div class="house">
+              <div class="windows-container">
+                <div class="window"></div>
+                <div class="window"></div>
+              </div>
+              <div class="door"></div>
+              <div class="dots-container left">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="dots-container right">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <div class="bulbs-container">
+                <div class="bulb left"></div>
+                <div class="bulb right"></div>
+              </div>
+            </div>
+            <div class="decorator-switch-container">
+              
+            <input type="checkbox" class="decorator-switch" id="decorator-switch"><br/>
+            <label for="decorator-switch">Turn on Decorations</label>
+            </div>
+            
         </main>
         <script src="./main.js"></script>
     </body>
