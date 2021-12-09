@@ -42,3 +42,8 @@ submission link:
  [https://javascriptmas-vic-day8.netlify.app/](https://javascriptmas-vic-day8.netlify.app/)
  
  ______________
+## Day 9 Challenge - Turn on the decorations.
+submission link: 
+ [https://javascriptmas-vic-day9.netlify.app/](https://javascriptmas-vic-day9.netlify.app/)
+ 
+ ______________
