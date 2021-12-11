@@ -19,7 +19,7 @@ body{
   box-shadow: 0 5px 14px #0003;
 }
 h1{
-  color: #077A8B;
+  color: #9F0459;
   margin-bottom: 1em;
 }
 .meter{
@@ -31,7 +31,7 @@ h1{
   position: relative;
 }
 .meter::-webkit-meter-bar {
-  border: 3px solid #077A8B;
+  border: 3px solid #9F0459;
   background: #CCC;
   height: 1.5em;
   width: 14em;
@@ -54,7 +54,7 @@ h1{
   position: relative;
   font-weight: 500;
   text-transform: capitalize;
-  color: #077A8B;
+  color: #9F0459;
 }
 .tooltip::before{
   content: "";
@@ -68,6 +68,6 @@ h1{
   transform: rotate(-45deg);
   z-index: 0;
   box-shadow: 0 5px 14px #0003;
-  border: 1px solid #077A8B;
+  border: 1px solid #9F0459;
   
 }
