@@ -61,14 +61,14 @@ if(selectedItem.classList.contains('to-be-deleted')){
  }
 else{
   const alreadyExist=guestsToDelete.findIndex((val)=>{
-  return val == guestId;
+  return Number(val == guestId);
  });
  if(alreadyExist != undefined){
    guestsToDelete.splice(alreadyExist,1);
  }
 
 }
-  deleteGuestBtn.innerHTML=`delete (<span>${guestsToDelete.length})</span>`
+  deleteGuestBtn.innerHTML= guestsToDelete.length ? `delete (<span>${guestsToDelete.length})</span>` : `delete`
 
 }
 
@@ -79,7 +79,7 @@ function deleteGuest(){
     }
   renderView();
   guestsToDelete=[];
-  deleteGuestBtn.innerHTML=`delete (<span>${guestsToDelete.length})</span>`;
+  deleteGuestBtn.innerHTML= guestsToDelete.length ? `delete (<span>${guestsToDelete.length})</span>` : `delete`
     return;
   }
   guests.splice(guests.length-1,1);
