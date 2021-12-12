@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding:0;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-family: inherit;
+}
+body{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background:url(./images/bg.jpg) no-repeat center/cover;
+  font-family: 'Outfit',sans-serif;
+}
+.container{
+  width: 100%;
+  max-width: 350px;
+}
+.heading{
+  text-align: center;
+  margin-bottom: 1.5em;
+  color: #450A64;
+  text-transform: uppercase;
+}
+.guests-list{
+  margin: 2em auto;
+  background:#fff;
+  box-shadow:  0 5px 15px #0003;
+  border-radius: 0.375em;
+  padding: 1em 0.5em;
+}
+.guest{
+  list-style-type: none;
+  text-transform: capitalize;
+  margin-bottom: 0.25em;
+  color: #450A64;
+  font-weight: 500;
+  padding: 0.375em;
+  cursor: pointer;
+}
+.guest:before{
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 2px;
+  height: 2px;
+  border: 4px solid currentColor;
+  margin-right: 0.375em;
+}
+.guest.to-be-deleted{
+  background: #C4101022;
+  color: #C41010;
+}
+
+.form-container{
+  background: #fff;
+  border-radius: 0.375em;
+  box-shadow: 0 8px 14px #0003;
+  padding: 1em 0.5em;
+}
+.guest-input{
+  padding:0.625em 1em;
+  width: 100%;
+  font-size: 1.2em;
+    border-radius: 0.25em;
+    margin-bottom: 0.5em;
+border: 2px solid #ccc;
+outline: none;
+color: #450A64;
+}
+.guest-input:focus{
+  border-color: currentColor;
+}
+.btns-container{
+  margin: 0.5em auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap:1em
+}
+.btn{
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.2em;
+  flex:1;
+  padding: 0.625em 1em;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  border-radius: 0.25em;
+  position: relative;
+}
+.add-btn{
+background-color: #450A64;
+}
+.add-btn.adding{
+  opacity: 0.6;
+  color: #ccc;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.add-btn::before{
+  position: absolute;
+  content: "";
+  width: 1em;
+  height: 1em;
+  right: 0.5em;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+animation: spin 1s linear infinite;
+  display: inline-block;
+  visibility: hidden;
+}
+.add-btn.adding::before{
+  visibility: visible;
+}
+@keyframes spin{
+  0%{
+    transform: rotate(0)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
+}
+.delete-btn{
+background-color: #C41010;
+}
