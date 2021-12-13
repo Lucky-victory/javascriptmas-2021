@@ -14,6 +14,8 @@ body{
   align-items: center;
   padding: 1em 0.5em;
   font-family: 'Outfit',sans-serif;
+  background: #0007 url(./images/bg.jpg) no-repeat center/cover;
+  background-blend-mode: soft-light;
 }
 .container{
   width: 100%;
@@ -35,9 +37,12 @@ font-size: 1.2em;
 h1{
   text-transform: uppercase;
   margin-bottom: 1em;
-  font-size: 2em;
+  font-size: 1.75em;
   text-align: center;
-  color: #095481;
+  color: #5F064C;
+  background: #fff;
+  padding: 0.5em;
+  border-radius: 0.375em
   
 }
 .dinner-section{
@@ -45,6 +50,7 @@ h1{
     box-shadow: 0 8px 14px #0003;
 border-radius: 0.375em;
 margin: 1em 0;
+background: #fff;
 }
 .dinner-image-wrapper{
   width: 100%;
@@ -60,6 +66,34 @@ margin: 1em 0;
 .dinner-info{
   margin: 1em 0;
   color: #095481;
+}
+.loader{
+  text-transform: capitalize;
+  text-align: center;
+  color: #095481;
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner{
+  display: inline-block;
+  margin-right: 0.5em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 3px solid currentColor;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  animation: spin 1.5s linear infinite;
+}
+@keyframes spin {
+  0%{
+    transform: rotate(0deg)
+  }
+  100%{
+    transform: rotate(360deg)
+  }
 }
 .form{
   background:#fff;
@@ -132,7 +166,7 @@ h2{
 }
 
 .btn{
-  padding:0.625em 0.5em;
+  padding:0.75em 0.5em;
   text-transform: uppercase;
   font-size: 1.2em;
   width: 100%;
