@@ -1,0 +1,148 @@
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 0.5em;
+  font-family: 'Outfit',sans-serif;
+}
+.container{
+  width: 100%;
+  padding: 2em 0.5em;
+  max-width: 500px;
+}
+.info{
+  background: #fff;
+    box-shadow: 0 8px 14px #0003;
+  padding:1em;
+border-radius: 0.375em;
+font-weight: 500;
+font-size: 1.2em;
+}
+.suggested-dinner{
+  text-transform: capitalize;
+  color: #0A907A;
+}
+h1{
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+  color: #095481;
+  
+}
+.dinner-section{
+  padding: 1em;
+    box-shadow: 0 8px 14px #0003;
+border-radius: 0.375em;
+margin: 1em 0;
+}
+.dinner-image-wrapper{
+  width: 100%;
+  height: 16em;
+  border-radius: inherit;
+}
+.dinner-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+.dinner-info{
+  margin: 1em 0;
+  color: #095481;
+}
+.form{
+  background:#fff;
+  padding:2em 1em;
+  border-radius: 0.375em;
+  box-shadow: 0 8px 14px #0003;
+}
+h2{
+  text-transform: capitalize;
+  margin-bottom: 0.625em;
+  color: #095481;
+}
+.input{
+  padding: 0.625em 0.5em;
+  font-size: 1.2em;
+  border-radius: 0.375em;
+  border: 3px solid #ccc;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+.input:focus{
+  border-color: #0A907A;
+  outline: none;
+  color: #0A907A;
+}
+.radioes-container{
+  display: flex;
+  align-items: center;
+  gap:1em;
+  overflow-x: auto;
+  padding: 0.5em ;
+  margin: 0.5em auto;
+  
+}
+.radio-wrapper{
+  display: flex;
+  align-items: center;
+}
+.radio{
+  appearance: none;
+  -webkit-appearance: none;
+}
+.radio-label{
+  box-shadow: 0 5px 12px #0004;
+  background: #fff;
+  border-radius: 2em;
+  color: #888;
+  border: 3px solid currentColor;
+  text-transform: capitalize;
+  padding: 0.5em;
+  transition: 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.radio-label::before{
+  content: "";
+  width: 0.375em;
+  height: 0.375em;
+  display: inline-block;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  border: 0.2em solid currentColor;
+  margin-right: 0.25em;
+}
+.radio:checked ~ .radio-label{
+  color: #0A907A;
+  transition: 0.3s ease-in-out;
+}
+
+.btn{
+  padding:0.625em 0.5em;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  width: 100%;
+  margin-top: 0.5em;
+  border-radius: 0.375em;
+  border: none;
+  background: #790850;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 12px #0004;
+  letter-spacing: 0.5px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+    <title>Scrimba Javascriptmas | Christmas Dinner Calculator</title>
+</head>
+
+<body>
+<main class="container">
+  <h1>Christmas dinner guests</h1>
+  <div class="info">
+    <p>Your christmas dinner is <span class="suggested-dinner">...</span></p>
+  </div>
+  <div class="dinner-section">
+    <div class="dinner-image-wrapper">
+      <img src="./images/pudding.jpg" alt="" class="dinner-image" />
+    </div>
+    <p class="dinner-info">
+      To feed eight people, you will need a turkey weighing a minimum of 3.5kg to satisfy your dinner guests.
+    </p>
+  </div>
+  <form class="form" autocomplete="off">
+    <h2>How many guests are you expecting?</h2>
+    <input type="number" class="input" id="num_of_guest_input" placeholder="No. of guests" maxlength="4"/>
+    <div class="radioes-container">
+      <div class="radio-wrapper">
+        <input type="radio" id="vegetarian" value="vegetarian" class="radio" name="guest-type"/>
+        <label for="vegetarian" class="radio-label">vegetarian</label>
+      </div>
+      <div class="radio-wrapper">
+        <input type="radio" id="meat-lover" value="meat-lover" class="radio" name="guest-type" checked/>
+        <label for="meat-lover" class="radio-label">meat lover</label>
+      </div>
+      
+    </div>
+    <button class="btn" type="submit">calculate</button>
+  </form>
+</main>
+
+<script src="./main.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
