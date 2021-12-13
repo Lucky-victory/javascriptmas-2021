@@ -65,12 +65,12 @@ background: #fff;
 }
 .dinner-info{
   margin: 1em 0;
-  color: #095481;
+  color: #0A907A;
 }
 .loader{
   text-transform: capitalize;
   text-align: center;
-  color: #095481;
+  color: #0A907A;
   margin: 1em 0;
   display: flex;
   align-items: center;
@@ -104,7 +104,7 @@ background: #fff;
 h2{
   text-transform: capitalize;
   margin-bottom: 0.625em;
-  color: #095481;
+  color: #5F064C;
 }
 .input{
   padding: 0.625em 0.5em;
