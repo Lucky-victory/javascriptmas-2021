@@ -1,3 +1,116 @@
-body {
-    font-size: 15pt;
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em;
+  background: #0005 url(./images/bg.jpg) no-repeat center/cover;
+  background-blend-mode: soft-light;
+  font-family: 'Outfit',sans-serif;
+}
+.container{
+  width: 500px;
+  max-width: 100%;
+  box-shadow:  0 8px 15px #0004;
+  border-radius: 0.375em;
+  background: #fff;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading{
+  margin-bottom: 0.5em;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--textColor,#430657);
+}
+.greeting-container{
+  padding: 1em;
+  width: 250px;
+  max-width: 100%;
+  min-height: 250px;
+  background: var(--bg);
+  color:var(--textColor);
+  
+  box-shadow: 0 5px 10px #0003;
+  text-align: center;
+  border-radius: 0.375em;
+  display: flex;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  font-family: 'Mountains Of Christmas',sans-serif;
+}
+.wrapper{
+  height: auto;
+  position: relative;
+  padding: 0.2em;
+}
+.greeting-text{
+transition: 0.4s;
+  display: inline-block;
+  letter-spacing: 2px;
+}
+.fade{
+  
+  animation: fadeIn 1.2s ease-out
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+    
+  }
+100%{
+  opacity: 1;
+}
+}
+.indicator{
+  display: inline-block;
+  height: 100%;
+  position: absolute;
+  right: -0.15em;
+  top: 0;
+  width: 0.15em;
+  background: currentColor;
+  border-radius: 0.5em;
+  transform: scale(0)
+}
+.indicator.animate{
+  animation: blink 1s ease-in-out infinite;
+  
+}
+@keyframes blink{
+  0%,100%{
+    transform: scale(0);
+    transform-origin: center;
+  }
+  50%{
+        transform-origin: center;
+
+  transform: scale(1);
+  }
+}
+
+.language-selector{
+  padding: 0.5em;
+  font-size: 1.5em;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 0.15em;
+  background: var(--bg);
+  color: var(--textColor);
+  text-transform: capitalize;
 }
