@@ -7,6 +7,11 @@
   font-family: inherit;
 }
 html{
+
+--font-family2: 'Nunito', sans-serif;
+--font-family3: 'Outfit', sans-serif;
+--font-family4: 'Playfair Display', serif;
+--font-family5: 'Titillium Web', sans-serif;
   
 }
 body{
@@ -32,6 +37,7 @@ body{
   margin-bottom: 0.5em;
   font-size: 2em;
   text-align: center;
+  color: #0B5177;
 }
 .card{
     box-shadow: 0 10px 20px #0005;
@@ -41,10 +47,29 @@ body{
     margin: 1em auto;
 position: relative;
 overflow: hidden;
---bg-color:#000;
---text-color:#6B0472;
-  --text-shadow: 2px 0 0px #CE8D09;
+
 --text-size:2.5em;
+}
+.love-actually{
+  --bg-color:#42555A;
+  --text-color:#8E0C8D;
+  --text-shadow: 2px 0 0px #000;
+}
+.polar-express{
+  --bg-color:#474A6B;
+  --text-color:#B55B05;
+  --text-shadow: 2px 0 0px #000;
+}
+.shrek{
+  --bg-color:#174D05;
+  --text-color:#60B40D;
+  --text-shadow: 2px 0 0px #000;
+}
+.die-hard{
+--bg-color:#000;
+--text-color:#D30C0C;
+  --text-shadow: 2px 0 0px #000;
+  
 }
 .la-la-land{
   --bg-color:#000;
@@ -52,7 +77,7 @@ overflow: hidden;
   --text-shadow: 2px 0 0px #CE8D09;
 }
 .flash{
- --bg-color:red;
+ --bg-color:#BA0E0E;
  --text-color:sandybrown;
  --text-shadow: 2px 0 0px #888; 
 }
@@ -65,7 +90,6 @@ overflow: hidden;
   --bg-color:#7A0662;
   --text-color:#4BA293;
   --text-shadow: 2px 0 0px #7F4707;
-  --text-size:2.5em;
 }
 .card-image-container{
   width: 100%;
@@ -86,16 +110,25 @@ overflow: hidden;
   top: 0;
   left: 0;
   z-index: 4;
-  background: linear-gradient(180deg,transparent,var(--bg-color));
+  background: linear-gradient(180deg,transparent ,var(--bg-color) 70%);
   display: flex;
   align-items: flex-end;
-  /* justify-content:center; */
+  
 
   padding: 0.5em;
+}
+.die-hard .card-content{
+    background: linear-gradient(200deg,transparent ,var(--bg-color) 70%)!important;
+
+}
+.shrek .movie-title{
+  text-transform: capitalize!important;
+  font-family: var(--font-family4)!important;
 }
 .movie-title{
   text-transform: uppercase;
   font-size: var(--text-size);
+  /* font-family: var(--font-family1); */
   letter-spacing: 1px;
   font-weight: 900;
   margin-bottom: 0.5em;
@@ -105,11 +138,12 @@ text-shadow: var(--text-shadow);
   position: absolute;
   left: -0.05em;
   transform: skewX(-15deg);
-  bottom: 1em;
+  bottom: 1.3em;
   transition: 0.4s ease-in-out;
   width: 100%;
   padding: 0.15em;
   text-align: center;
+  
 }
 
 .movie-genre,.movie-director{
@@ -119,9 +153,21 @@ text-shadow: var(--text-shadow);
   font-weight: 500;
   font-size: 0.75em;
   margin-bottom: 0.375em;
+  font-family: var(--font-family5);
 }
-.movie-director{
-  
+.movie-actor{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1em;
+  position: absolute;
+  bottom: 3.5em;
+  display: block;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  font-weight: 500;
+    font-family: var(--font-family5);
+
 }
 .movie-age{
   font-weight: 900;
@@ -130,5 +176,35 @@ text-shadow: var(--text-shadow);
   bottom: 0;
   right: 0.15em;
   text-transform: uppercase;
-  color:#D1D0D0;
+  color:#f9f9f9;
+    
+
+}
+.selector-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap:1.5em;
+  max-width: 16em;
+  margin: 2em auto 1em;
+}
+.selector{
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 0.375em;
+  cursor: pointer;
+}
+.btn{
+  padding: 0.625em 1em;
+  font-size: 1.2em;
+  font-weight: 500;
+  text-transform: capitalize;
+  background: #0B5177;
+  color: #fff;
+  border: 3px solid transparent;
+border-radius: 3em;
+box-shadow:  0 5px 12px #0005;
+cursor: pointer;
+}
+.btn:focus{
+  border: 3px solid #8A0B87;
 }
