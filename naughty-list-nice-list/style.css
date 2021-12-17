@@ -97,6 +97,7 @@ body{
   padding: 0.25em;
   border-radius: 0.25em;
   animation: jumpIn 1s ease-in backwards;
+  cursor: pointer;
 }
 @keyframes jumpIn{
   0%{
