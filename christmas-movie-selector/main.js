@@ -123,6 +123,7 @@ loadAge()
 function selectMovie(){
   const selectedAge=ageSelector.value;
   const selectedGenre=genreSelector.value;
+  console.log(ageSelector);
   const filteredMovie=moviesArr.filter((movie)=>{
     return (movie.age == selectedAge && movie.genre == selectedGenre);
     
