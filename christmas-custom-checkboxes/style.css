@@ -11,7 +11,7 @@ html{
     --bright-red: #d42d2f;
     --green: #0A845F;
     --snow: #f0f4f7;
-    --blue:#3369D6;
+  
 }
 
 body{
@@ -37,7 +37,7 @@ padding: 2em 0.5em;
 .red{
   color: var(--bright-red);
 }
-.blue{
+.green{
   color: var(--green);
 }
 .animate{
