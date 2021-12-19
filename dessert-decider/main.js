@@ -3,7 +3,7 @@ const btn=document.querySelector('.btn');
 const searchItems=document.querySelectorAll('.search-item');
 const imagePreview=document.querySelector('.image-preview');
 const baseUrl = 'https://foodish-api.herokuapp.com/api/images';
-let searchValue = 'burger';
+let searchValue = 'dessert';
 const storage={
   getHistory(){
   return (JSON.parse(localStorage.getItem('foodish-history') || '[]'));
