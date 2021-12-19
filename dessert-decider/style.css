@@ -119,6 +119,7 @@ border: 4px solid transparent;
   width: 6em;
   object-fit: cover;
   flex-shrink: 0;
+  cursor: pointer;
 }
 .no-history{
   text-align: center;
