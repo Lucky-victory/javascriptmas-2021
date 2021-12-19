@@ -1,0 +1,127 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  --wine-red: #c7375f;
+  --bright-red: #d42d2f;
+  --dark-green: #344d2f;
+  --light-green: #77A847;
+  --gold: #fac57d;
+  --snow: #f0f4f7;
+}
+
+body{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em 1em;
+  font-family: 'Outfit',sans-serif;
+}
+.container{
+  background: var(--dark-green);
+  padding: 2em 1em;
+  border-radius: 0.5em;
+  box-shadow: 0 8px 16px #0004;
+  max-width: 100%;
+  width: 700px;
+  text-align: center;
+  text-transform: capitalize;
+}
+.heading{
+  color: #fff;
+  margin-bottom: 2em;
+}
+.btn{
+  background: var(--gold);
+  color: var(--wine-red);
+  padding: 0.875em 2em;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1.3em;
+  border-radius: 3em;
+border: 4px solid transparent;
+}
+.btn:focus{
+  border-color: var(--light-green);
+}
+
+.search-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:1em;
+  overflow-x: auto;
+  margin: 1em auto;
+  max-width: 500px;
+  width: 100%;
+  padding: 1em;
+}
+.search-item{
+  padding: 0.5em 1em;
+  font-size: 1.2em;
+  border-radius: 3em;
+  background: #fff;
+  box-shadow: 0 6px 10px #0003;
+  border: 4px solid transparent;
+  cursor: pointer;
+  font-weight: 400;
+  text-transform: inherit;
+  color: var(--dark-green);
+}
+.search-item:hover{
+  border-color: var(--light-green);
+}
+.search-item.active{
+  border-color: var(--light-green);
+  color: var(--light-green);
+ font-weight: 500; 
+}
+.image-preview-container{
+  width: 100%;
+  max-width: 20em;
+  height: 20em;
+  border-radius: 1em;
+  box-shadow: 0 10px 15px #0004,0 0 0 4px var(--gold);
+  margin: 1em auto 2em;
+  
+}
+.image-preview{
+  object-fit: cover;
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+.history{
+  margin: 1em auto;
+  color: #fff;
+}
+.history-list{
+  display: flex;
+  align-items: center;
+  gap:1em;
+  padding: 1em;
+  margin: auto;
+  max-width: 500px;
+  overflow-x: auto;
+  
+}
+.history-image{
+  box-shadow: 0 6px 12px #0004;
+  border-radius: 0.75em;
+  height: 6em;
+  width: 6em;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.no-history{
+  text-align: center;
+  width: 100%;
+  color: #888;
+}
