@@ -43,7 +43,7 @@ function getSearchValue(evt) {
 const target=evt.currentTarget
 const {value}=target.dataset;
 searchValue=value;
-
+searchDessert();
 const activeItem=document.querySelector('.search-item.active');
 if(activeItem){
   activeItem.classList.remove('active');
