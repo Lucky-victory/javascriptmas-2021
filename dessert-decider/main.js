@@ -39,11 +39,22 @@ function searchDessert(){
   })
 }
 searchDessert();
+function searchFood(food){
+  fetch(`${baseUrl}/${food}`).then((res)=>res.json()).then((data)=>{
+    imagePreview.src=data.image;
+    imagePreview.alt=food;
+    storage.setHistory(data);
+    renderHistory();
+  }).catch((err)=>{
+    console.log(err);
+  })
+}
+
 function getSearchValue(evt) {
 const target=evt.currentTarget
 const {value}=target.dataset;
-searchValue=value;
-searchDessert();
+const food=value;
+searchFood(food);
 const activeItem=document.querySelector('.search-item.active');
 if(activeItem){
   activeItem.classList.remove('active');
