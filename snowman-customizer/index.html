@@ -2,13 +2,64 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrimba Javascriptmas | Snowman Customizer</title>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+  <h1 class="heading">snowman customizer</h1>
+  <main class="container">
+    <div class="wrapper">
+      <div class="input-wrapper"><input type="color"  id="outer-eye-color" class="input" value="#468085">
+      <label for="outer-eye-color"> outer Eye color</label>
+      </div>
+      <div class="input-wrapper"><input type="color"  id="inner-eye-color" class="input">
+      <label for="inner-eye-color">inner Eye color</label>
+      </div>
+      <div class="input-wrapper"><input type="color" name="" id="nose-color" class="input" value="#fac57d">
+            <label for="nose-color">nose color</label>
 
+      </div>
+      <div class="input-wrapper"><input type="color"  id="mouth-color" class="input" value="#468085">
+            <label for="mouth-color">mouth color</label>
+
+      </div>
+      <div class="input-wrapper"><input type="color" id="button-color" class="input">
+      <label for="button-color">button color</label>
+      </div>
+      <div class="input-wrapper"><input type="color" id="ribbon-color" class="input" value="#d42d2f">
+      <label for="ribbon-color">ribbon color</label>
+      </div>
+      <div class="input-wrapper"><input type="color" id="hands-color" class="input" value="#d42d2f">
+      <label for="hands-color">hands color</label>
+      </div>
+      <button class="add-ribbon-btn btn">add ribbon</button>
+      <button class=" btn" id="add-hands-btn">add hands</button>
+    </div>
+    <div class="snowman">
+      <div class="snowman-head">
+        <span class="snowman-eye left-eye"></span>
+        <span class="snowman-eye right-eye"></span>
+        <div class="snowman-nose"></div>
+        <div class="snowman-mouth"></div>
+        <div class="snowman-ribbon"></div>
+      </div>
+      <div class="snowman-body">
+        <div class="snowman-hand left-hand"></div>
+        <div class="snowman-hand right-hand"></div>
+        <div class="snowman-btns-container">
+          <span class="snowman-btn"></span>
+          <span class="snowman-btn"></span>
+          <span class="snowman-btn"></span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
