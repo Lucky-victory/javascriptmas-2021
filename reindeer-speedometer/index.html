@@ -4,16 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--   <script src="https://kit.fontawesome.com/640367d713.js" crossorigin="anonymous"></script>
- -->  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;900&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>  
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>Scrimba Javascriptmas | Reindeer Speedometer</title>
 </head>
 
 <body>
   <h1>Reindeer speedometer 🦌</h1>
-  <div class="container">
-    <label for="select">Current location:</label>
+  <main class="container">
+  <div id="speedometer_guage">
+    </div>
+  <p id="speedometer">Enter current location and journey time to discover average reindeer speed.</span></p>
+    
+    <div class="inner-container">
+      
+    <div class="wrapper">
+    <label for="select">Current location:</label><br/>
     <select id="select">
       <option id="munich" value="Munich">Munich</option>
       <option value="Kiev">Kiev</option>
@@ -22,10 +29,19 @@
       <option value="Tijuana">Tijuana</option>
       <option value="Chicago">Chicago</option>
     </select>
-    <label for="time">Journey time:</label>
-    <input type="number" id="time" name="time" value=0>
-  </div>
-  <p id="speedometer">Enter current location and journey time to discover average reindeer speed.</span></p>
+    </div>
+    
+    <div class="wrapper">
+      
+    <label for="time">Journey time:</label><br/>
+    <input type="number" id="time" name="time" value="0" class="input" />
+    </div>
+    </div>
+    <button class="run-btn">run🏃</button>
+
+  <p class="travel-history"></p>
+  </main>
+  
   <script src="./main.js"></script>
 </body>
 
