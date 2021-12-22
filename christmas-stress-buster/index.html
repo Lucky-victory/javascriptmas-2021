@@ -2,13 +2,46 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+  <title>Srimba Javascriptmas | Christmas Stress Buster</title>
 </head>
 
 <body>
-
+  <h1 class="heading">christmas stress buster</h1>
+  <main class="container">
+    <video src="./files/Beach.mp4" class="video" muted loop preload="auto" poster="./files/open-arms.jpg"></video>
+    <div class="timer-container">
+      <div class="minutes-container">
+        <svg>
+          <circle class="inner-circle " r="60" cx="65" cy="65"></circle>
+          <circle class="outer-circle minutes" r="60" cx="65" cy="65"></circle>
+        </svg>
+        <div class="timer"><span class="minutes-counter">00</span>
+        </div>
+      </div>
+      <span class="divider">:</span>
+      <div class="seconds-container">
+        <svg>
+          <circle class="inner-circle " r="60" cx="65" cy="65"></circle>
+          <circle class="outer-circle seconds" r="60" cx="65" cy="65"></circle>
+        </svg>
+        <div class="timer"><span class="seconds-counter">00</span></div>
+      </div>
+    </div>
+    <div class="btns-container">
+      <div class="btns-inner-container">
+        
+      <button class="btn buster-btn">Bust the stress</button>
+      <button class="btn reset-btn">Reset Timer</button>
+      </div>
+      
+    </div>
+  </main>
+  <script src="./main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
