@@ -7,7 +7,7 @@ const video=document.querySelector('.video');
 const resetBtn=document.querySelector('.reset-btn');
 const busterBtn=document.querySelector('.buster-btn');
 const btnsInnerContainer=document.querySelector('.btns-inner-container');
-
+const busterWords=document.querySelector('.buster-words');
 let intervalId=null;
 const interval=1000;
 const milliseconds=1200;
@@ -33,7 +33,11 @@ function triggerTimer(){
   },interval);
   playVideo();
   playAudio();
- btnsInnerContainer.classList.add('moveUp')
+ btnsInnerContainer.classList.add('moveUp');
+ busterWords.textContent='Take a deep breath and Free your mind.';
+ setTimeout(()=>{
+   busterWords.textContent='Let the music heal you.'
+ },10000)
 }
 function setCounter(){
   minutes = Math.floor((minutesInMilliseconds / 1000) / 60);
@@ -55,6 +59,7 @@ function resetTimer(){
  stopVideo();
  setCounter();
  btnsInnerContainer.classList.remove('moveUp');
+ busterWords.textContent='';
 }
 
 function playAudio(){
