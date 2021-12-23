@@ -5,26 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
-    <title> </title>
+    <title> Scrimba Javascriptmas | Customisable santa sign</title>
 </head>
 
 <body>
   <h1 class="heading">customisable santa sign</h1>
 <main class="container">
-  <div class="message-container">
-    <span class="emoji left">🎅</span>
-    <span class="message">santa sign here</span>
-    <span class="emoji right">🤶</span>
+  <div class="sign-container">
+    <span class="sign-emoji selected">🎅</span>
+    <span class="sign">santa sign here</span>
+    <span class="sign-emoji ">🤶</span>
   </div>
   <div class="input-container">
-    <label for="message_input">message to santa</label>
-    <input type="text" class="input" id="message_input" placeholder="Message to Santa"/>
-<span class="message-hint">min 5 - max 40 characters</span>
+    <label for="message_input" class="input-label">message to santa</label>
+    <input type="text" class="input" id="message_input" placeholder="Message to Santa" min="5" maxlength="50"/>
+<span class="message-hint">min 5 - max 50 characters</span>
   </div>
+  <div class="drop-downs-container">
+    
   <div class="drop-down-wrapper">
     <span class="drop-down-title">choose theme</span>
-  <div class="drop-down" tabindex="0">
-    
+  <div class="drop-down theme-drop-down" >
+    <span class="drop-down-theme-item " data-theme-text="#fff" data-theme-bg="#066C65" style="--theme-bg:#066C65;--theme-text:#fff" ></span>
+    <span class="drop-down-theme-item" data-theme-text="#fff" data-theme-bg="#2D076A" style="--theme-bg:#2D076A;--theme-text:#fff" ></span>
+    <span class="drop-down-theme-item active-theme" data-theme-text="#035048" data-theme-bg="#A8DED9" style="--theme-bg:#A8DED9;--theme-text:#035048" ></span>
+    <span class="drop-down-theme-item" data-theme-text="#C26905" data-theme-bg="#E6D8C9" style="--theme-bg:#E6D8C9;--theme-text:#C26905" ></span>
+    <span class="drop-down-theme-item" data-theme-text="#095C7E" data-theme-bg="#C9DEE6" style="--theme-bg:#C9DEE6;--theme-text:#095C7E" ></span>
+    <span class="drop-down-theme-item" data-theme-text="#6E097E" data-theme-bg="#DFD0E1" style="--theme-bg:#DFD0E1;--theme-text:#6E097E" ></span>
   </div>
   </div>
   
@@ -33,8 +40,15 @@
      
    Choose Emoji
    </span> 
-  <div class="drop-down" tabindex="0">
-    
+  <div class="drop-down">
+    <span class="drop-down-emoji-item">🎁</span>
+    <span class="drop-down-emoji-item">🤡</span>
+    <span class="drop-down-emoji-item active-emoji">🎅</span>
+    <span class="drop-down-emoji-item">💂</span>
+    <span class="drop-down-emoji-item">🎄</span>
+        <span class="drop-down-emoji-item ">🤶</span>
+
+  </div>
   </div>
   </div>
   
