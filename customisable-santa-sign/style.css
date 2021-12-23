@@ -24,6 +24,7 @@ body{
   width: 100%;
   min-height: 100vh;
   padding: 1em;
+  font-family: 'Outfit',sans-serif;
 }
 .container{
   width: 700px;
